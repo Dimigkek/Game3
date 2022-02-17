@@ -4,6 +4,7 @@ c = 0
 u = 0
 again = ""
 lista = []
+r_one = 1
 # game
 while again != "no" or again != "No" :
     k = 0
@@ -12,6 +13,9 @@ while again != "no" or again != "No" :
     lista.clear()
     print("Welcome to Paper,Rock,Scissor the first who gets three wins win!")
     while u < 3 and c < 3:
+        print("Round : "+str(r_one))
+        print("User : "+ str(u) +" Computer : " + str(c))
+        r_one += 1
         user = input("Rock,Paper,Scissor?\n")
         while user not in ["Rock", "Paper", "Scissor"]:
             user = input("Please choose between : Rock,Paper,Scissor?\n")
@@ -26,35 +30,35 @@ while again != "no" or again != "No" :
         if user == "Rock":
             if computer == "Rock":
                 print("Draw")
-                r = "Player:"+user+" Computer: " + computer + " Draw "+ "Score : " + str(u) + "-" + str(c)
+                r = "Player: "+user+" Computer: " + computer + " Draw "+ "Score : " + str(u) + "-" + str(c)
                 lista.append(r)
             elif computer == "Paper":
                 print("Computer win")
                 c += 1
-                r = "Player:" + user + " Computer: " + computer + " Computer win " + "Score : " + str(u) + "-" + str(c)
+                r = "Player: " + user + " Computer: " + computer + " Computer win " + "Score : " + str(u) + "-" + str(c)
                 lista.append(r)
 
             else:
                 print("User win")
                 u += 1
-                r = "Player:" + user + " Computer: " + computer + " User win " + "Score : " + str(u) + "-" + str(c)
+                r = "Player: " + user + " Computer: " + computer + " User win " + "Score : " + str(u) + "-" + str(c)
                 lista.append(r)
 
         elif user == "Paper":
             if computer == "Rock":
                 print("User win")
                 u += 1
-                r = "Player:"+user+" Computer: " + computer + " User win "+ "Score : " + str(u) + "-" + str(c)
+                r = "Player: "+user+" Computer: " + computer + " User win "+ "Score : " + str(u) + "-" + str(c)
                 lista.append(r)
 
             elif computer == "Paper":
                 print("Draw")
-                r = "Player:" + user + " Computer: " + computer + "Draw " + "Score : " + str(u) + "-" + str(c)
+                r = "Player: " + user + " Computer: " + computer + "Draw " + "Score : " + str(u) + "-" + str(c)
                 lista.append(r)
             else:
                 print("Computer win")
                 c += 1
-                r = "Player:" + user + " Computer: " + computer + " Computer win " + "Score : " + str(u) + "-" + str(c)
+                r = "Player: " + user + " Computer: " + computer + " Computer win " + "Score : " + str(u) + "-" + str(c)
                 lista.append(r)
 
         else:
@@ -67,16 +71,16 @@ while again != "no" or again != "No" :
             elif computer == "Paper":
                 print("User win")
                 u += 1
-                r = "Player:" + user + " Computer: " + computer + " User win " + "Score : " + str(u) + "-" + str(c)
+                r = "Player: " + user + " Computer: " + computer + " User win " + "Score : " + str(u) + "-" + str(c)
                 lista.append(r)
 
             else:
                 print("Draw")
-                r = "Player:" + user + " Computer: "+ computer  + " Computer win " + "Score : " + str(u) + "-" + str(c)
+                r = "Player: " + user + " Computer: "+ computer  + " Computer win " + "Score : " + str(u) + "-" + str(c)
                 lista.append(r)
 
     if c == 3:
-        print("Coputer Won!!!")
+        print("Computer Won!!!")
     else:
         print("User Win!!!")
     print("Match History :")
